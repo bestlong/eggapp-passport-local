@@ -1,0 +1,1 @@
+# eggapp-passport-local
