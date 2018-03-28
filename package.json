@@ -1,14 +1,22 @@
 {
   "name": "eggapp-passport-local",
   "version": "1.0.0",
-  "description": "",
+  "description": "使用 egg 框架實作登入登出功能",
   "main": "index.js",
   "scripts": {
     "dev": "egg-bin dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "egg",
+    "egg-passport",
+    "egg-passport-local"
+  ],
+  "author": {
+    "name": "Shao Yu Lung",
+    "email": "bestlong168@gmail.com",
+    "url": "https://github.com/bestlong/eggapp-passport-local"
+  },
   "license": "MIT",
   "private": true,
   "dependencies": {
