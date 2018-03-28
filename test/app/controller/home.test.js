@@ -18,7 +18,7 @@ describe('test/app/controller/home.test.js', () => {
       .expect(200);
   });
 
-  it('should POST /login', async () => {
+  it('should POST /login error (no CSRF)', async () => {
     await app.httpRequest()
       .post('/login')
       .expect(403);
@@ -48,6 +48,18 @@ describe('test/app/controller/home.test.js', () => {
 
     assert(res.statusCode === 302);
     assert(res.text.includes('Redirecting to <a href="/login">/login</a>.'));
+  });
+
+  it('should POST /login error (no CSRF)', async () => {
+    const res = await app.httpRequest()
+      .post('/login')
+      .send({
+        username: loingUsername,
+        password: loingUsername
+      });
+
+    assert(res.statusCode === 403);
+    assert(res.text.includes('missing csrf token'));
   });
 
   it('should GET /logout', async () => {
