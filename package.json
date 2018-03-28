@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "egg-bin dev",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "egg": "^2.5.0"
+    "egg": "^2.5.0",
+    "egg-bin": "^4.5.0"
   }
 }
