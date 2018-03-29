@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "egg-bin dev",
+    "cov": "egg-bin cov",
     "test": "egg-bin test"
   },
   "keywords": [
